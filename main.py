@@ -14,7 +14,7 @@ async def on_member_join(member):
 	rules = client.get_channel(rules_id)
 	roles = client.get_channel(roles_id)
     #await channel.send(msg)
-	await client.send_message(channel, 'Welcome, {}! Please read the #{} and get some #{} !'.format(member.mention, rules.id, roles.id))
-
+	await client.send_message(channel, 'Welcome, {}! Please read the {} and get some {} !'.format(member.mention, rules.mention, roles.mention))
+ 
 	
 client.run(token)
