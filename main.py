@@ -18,7 +18,7 @@ async def on_member_join(member):
 	def check(msg):
 		return msg.content.startswith('Welcome') and member in msg.content
 
-	message = await client.wait_for_message(timeout=10,check=check)
+	message = await client.wait_for_message(timeout=60,check=check)
 	if not message:
 		await client.send_message(channel, 'Welcome, {}! Please read the {} and get some {} !'.format(member.mention, rules.mention, roles.mention))
 
