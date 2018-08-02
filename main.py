@@ -16,7 +16,7 @@ async def on_member_join(member):
 	roles = client.get_channel(roles_id)
     #await channel.send(msg)
 	def check(msg):
-		return msg.content.startswith('Welcome') and member in msg.content
+		return msg.content.startswith('Welcome') and member.mention in msg.content
 
 	message = await client.wait_for_message(timeout=60,check=check)
 	if not message:
