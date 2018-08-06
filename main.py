@@ -21,7 +21,8 @@ async def on_member_join(member):
 
 	message = await client.wait_for_message(timeout=timer,check=check)
 	if not message:
-		await client.send_message(channel, 'Welcome, {}! Please read the {} and get some {} !'.format(member.mention, rules.mention, roles.mention))
+		await client.send_message(channel, 'Welcome, {}! Please read the {} and get some {} !'\
+		' It`s  important, in order to understand how to navigate through the text channels quickly.'.format(member.mention, rules.mention, roles.mention))
 
 
 	
