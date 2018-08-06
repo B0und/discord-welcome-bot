@@ -8,7 +8,7 @@ token = os.environ.get('BOT_TOKEN')
 channel_id = os.environ.get('channel_id')
 roles_id = os.environ.get('roles_id')
 rules_id = os.environ.get('rules_id')
-timer = os.environ.get("timer")
+timer = int(os.environ.get("timer"))
 	
 @client.event
 async def on_member_join(member):
